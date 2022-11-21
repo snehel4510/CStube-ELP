@@ -1,4 +1,8 @@
 import React from 'react'
+
+import { useState } from 'react'
+import Authmodal from '../Home/Authmodal'
+
 import Logo from './img/logo.svg'
 import Coding from './img/coding.svg'
 import Lin from './img/linkedin.svg'
@@ -12,6 +16,9 @@ import Fb from './img/icon-facebook.svg'
 import './Landing.css'
 
 export default function Landing() {
+
+    const [isOpen, setIsOpen] = useState(false)
+    const [Comp, setComp] = useState(true)
 
     const nav = document.querySelector('.sticky');
     const menu = document.querySelector('.menu');
@@ -59,13 +66,15 @@ export default function Landing() {
                             <a href="#" class=" hover:text-brightRed">Home</a>
                             <a href="#features" class=" hover:text-brightRed">Features</a>
                             <a href="#team" class=" hover:text-brightRed">Our Team</a>
-                            <a href="#" class=" hover:text-brightRed">Pricing</a>
-                            <a href="#" class=" hover:text-brightRed">Contact</a>
+                            <a href="#" class=" hover:text-brightRed">Courses</a>
+                            <a href="#footer" class=" hover:text-brightRed">Contact</a>
                         </div>
                         {/* <!-- buttons  --> */}
                         <div class="hidden md:flex space-x-4">
-                            <a href="#" class="login bg-brightRed font-bold text-white px-4 py-2 rounded-md hover:bg-red-400">Login</a>
-                            <a href="#" class="signup bg-black text-white font-bold px-4 py-2 rounded-md hover:bg-gray-500">Sign up</a>
+                            <button onClick={() => { setIsOpen(true); setComp(true) }} class="login bg-brightRed font-bold text-white px-4 py-2 rounded-md hover:bg-red-400">Login</button>
+                            <Authmodal Comp={Comp} Open={isOpen} onClose={() => setIsOpen(false)} />
+                            <button onClick={() => { setIsOpen(true); setComp(false) }} class="signup bg-black text-white font-bold px-4 py-2 rounded-md hover:bg-gray-500">Sign up</button>
+                            <Authmodal Comp={Comp} Open={isOpen} onClose={() => setIsOpen(false)} />
                         </div>
                     </div>
                 </main>
@@ -83,9 +92,8 @@ export default function Landing() {
                             We bring you the best content available right to your screens from the free world of Youtube. So you don't need to worry paying to some random platforms.
                         </p>
                         <div class="flex justify-center md:justify-start">
-                            <a href="#" class="p-3 px-6 pt-2 font-bold text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight">
-                                Get Started
-                            </a>
+                            <button onClick={() => { setIsOpen(true); setComp(false) }} class="p-3 px-6 pt-2 font-bold text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight">Get Started</button>
+                            <Authmodal Comp={Comp} Open={isOpen} onClose={() => setIsOpen(false)} />
                         </div>
                     </div>
                     {/* <!-- right item  image--> */}
@@ -208,7 +216,8 @@ export default function Landing() {
                     </h2>
                     {/* <!-- Button --> */}
                     <div>
-                        <a href="#" class="w-8 h-2 p-3 px-6 pt-2 font-bold text-brightRed bg-gray-900 rounded-full shadow-2xl baseline hover:bg-white">Get Started</a>
+                        <button onClick={() => { setIsOpen(true); setComp(false) }} class="p-3 px-6 pt-2 text-brightRed font-bold bg-black rounded-full baseline hover:text-black hover:bg-white">Get Started</button>
+                        <Authmodal Comp={Comp} Open={isOpen} onClose={() => setIsOpen(false)} />
                     </div>
                 </div>
             </section>
