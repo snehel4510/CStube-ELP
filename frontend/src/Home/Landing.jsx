@@ -1,7 +1,9 @@
 import React from 'react'
 
-import { useState } from 'react'
-import Authmodal from '../Home/Authmodal'
+// import { useState } from 'react'
+import { Link } from "react-router-dom";
+
+// import Authmodal from '../Home/Authmodal'
 
 import Logo from './img/logo.svg'
 import Coding from './img/coding.svg'
@@ -17,8 +19,8 @@ import './Landing.css'
 
 export default function Landing() {
 
-    const [isOpen, setIsOpen] = useState(false)
-    const [Comp, setComp] = useState(true)
+    // const [isOpen, setIsOpen] = useState(false)
+    // const [Comp, setComp] = useState(true)
 
     const nav = document.querySelector('.sticky');
     const menu = document.querySelector('.menu');
@@ -63,18 +65,19 @@ export default function Landing() {
                         </div>
                         {/* <!-- menu items  --> */}
                         <div class="menu hidden font-semibold md:flex space-x-6">
-                            <a href="#" class=" hover:text-brightRed">Home</a>
+                            <a href="#hero" class=" hover:text-brightRed">Home</a>
                             <a href="#features" class=" hover:text-brightRed">Features</a>
                             <a href="#team" class=" hover:text-brightRed">Our Team</a>
-                            <a href="#" class=" hover:text-brightRed">Courses</a>
+                            <a href="#hero" class=" hover:text-brightRed">Courses</a>
                             <a href="#footer" class=" hover:text-brightRed">Contact</a>
                         </div>
                         {/* <!-- buttons  --> */}
+                        {/* onClick={() => { setIsOpen(true); setComp(true) }} */}
                         <div class="hidden md:flex space-x-4">
-                            <button onClick={() => { setIsOpen(true); setComp(true) }} class="login bg-brightRed font-bold text-white px-4 py-2 rounded-md hover:bg-red-400">Login</button>
-                            <Authmodal Comp={Comp} Open={isOpen} onClose={() => setIsOpen(false)} />
-                            <button onClick={() => { setIsOpen(true); setComp(false) }} class="signup bg-black text-white font-bold px-4 py-2 rounded-md hover:bg-gray-500">Sign up</button>
-                            <Authmodal Comp={Comp} Open={isOpen} onClose={() => setIsOpen(false)} />
+                            <Link to="/login"><button class="login bg-brightRed font-bold text-white px-4 py-2 rounded-md hover:bg-red-400">Login</button></Link>
+                            {/* <Authmodal Comp={Comp} Open={isOpen} onClose={() => setIsOpen(false)} /> */}
+                            <Link to="/signup"><button class="signup bg-black text-white font-bold px-4 py-2 rounded-md hover:bg-gray-500">Sign up</button></Link>
+                            {/* <Authmodal Comp={Comp} Open={isOpen} onClose={() => setIsOpen(false)} /> */}
                         </div>
                     </div>
                 </main>
@@ -92,8 +95,8 @@ export default function Landing() {
                             We bring you the best content available right to your screens from the free world of Youtube. So you don't need to worry paying to some random platforms.
                         </p>
                         <div class="flex justify-center md:justify-start">
-                            <button onClick={() => { setIsOpen(true); setComp(false) }} class="p-3 px-6 pt-2 font-bold text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight">Get Started</button>
-                            <Authmodal Comp={Comp} Open={isOpen} onClose={() => setIsOpen(false)} />
+                            <Link to="/signup"><button class="p-3 px-6 pt-2 font-bold text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight">Get Started</button></Link>
+                            {/* <Authmodal Comp={Comp} Open={isOpen} onClose={() => setIsOpen(false)} /> */}
                         </div>
                     </div>
                     {/* <!-- right item  image--> */}
@@ -216,8 +219,8 @@ export default function Landing() {
                     </h2>
                     {/* <!-- Button --> */}
                     <div>
-                        <button onClick={() => { setIsOpen(true); setComp(false) }} class="p-3 px-6 pt-2 text-brightRed font-bold bg-black rounded-full baseline hover:text-black hover:bg-white">Get Started</button>
-                        <Authmodal Comp={Comp} Open={isOpen} onClose={() => setIsOpen(false)} />
+                        <Link to="/signup"><button class="p-3 px-6 pt-2 text-brightRed font-bold bg-black rounded-full baseline hover:text-black hover:bg-white">Get Started</button></Link>
+                        {/* <Authmodal Comp={Comp} Open={isOpen} onClose={() => setIsOpen(false)} /> */}
                     </div>
                 </div>
             </section>
@@ -233,25 +236,25 @@ export default function Landing() {
                         </div>
                         <div>  <img src="img/logo-white.svg" alt="" class="h-8" /> </div>
                         <div class="flex justify-center space-x-4">
-                            <a href="#"><img src={Twtw} alt="" /></a>
-                            <a href="#"><img src={Insw} alt="" /></a>
-                            <a href="#"><img src={Linw} alt="" /></a>
-                            <a href="#"><img src={Fb} alt="" /></a>
-                            <a href="#"><img src={Pin} alt="" /></a>
+                            <img src={Twtw} alt="" />
+                            <img src={Insw} alt="" />
+                            <img src={Linw} alt="" />
+                            <img src={Fb} alt="" />
+                            <img src={Pin} alt="" />
                         </div>
                     </div>
                     {/* <!-- list containers --> */}
                     <div class="flex justify-around space-x-32">
                         <div class="flex flex-col text-white font-bold space-y-3">
-                            <a href="#" class="hover:text-brightRed">Home</a>
-                            <a href="#" class="hover:text-brightRed">Features</a>
-                            <a href="#" class="hover:text-brightRed">Our team</a>
-                            <a href="#" class="hover:text-brightRed">Courses</a>
+                            <a href="#hero" class="hover:text-brightRed">Home</a>
+                            <a href="#features" class="hover:text-brightRed">Features</a>
+                            <a href="#team" class="hover:text-brightRed">Our team</a>
+                            <a href="#hero" class="hover:text-brightRed">Courses</a>
                         </div>
                         <div class="flex flex-col text-white font-bold space-y-3">
-                            <a href="#" class="hover:text-brightRed">Careers</a>
-                            <a href="#" class="hover:text-brightRed">About us?</a>
-                            <a href="#" class="hover:text-brightRed">Contact</a>
+                            <a href="#hero" class="hover:text-brightRed">Careers</a>
+                            <a href="#features" class="hover:text-brightRed">About us?</a>
+                            <a href="#footer" class="hover:text-brightRed">Contact</a>
                         </div>
                     </div>
                     {/* <!-- input  --> */}
