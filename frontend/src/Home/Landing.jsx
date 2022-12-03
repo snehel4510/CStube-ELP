@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 // import Authmodal from '../Home/Authmodal'
 
-import Logo from './img/logo.svg'
+// import Logo from './img/logo.svg'
 import Coding from './img/coding.svg'
 import Lin from './img/linkedin.svg'
 import Twt from './img/twitter.svg'
@@ -15,61 +15,62 @@ import Twtw from './img/twitterw.svg'
 import Insw from './img/instaw.svg'
 import Pin from './img/pinterest.svg'
 import Fb from './img/icon-facebook.svg'
+
 import './Landing.css'
+import logo from './img/icons8.svg'
 
 export default function Landing() {
 
     // const [isOpen, setIsOpen] = useState(false)
     // const [Comp, setComp] = useState(true)
 
-    const nav = document.querySelector('.sticky');
-    const menu = document.querySelector('.menu');
-    const signup = document.querySelector('.signup');
-    window.onscroll = () => {
-        if (window.pageYOffset > 0) {
-            nav.classList.add('bg-black');
-            nav.classList.add('opacity-75');
-            nav.classList.remove('bg-transparent');
-            menu.classList.add('text-white');
-            signup.classList.add('bg-white');
-            signup.classList.add('text-black');
-            signup.classList.remove('bg-black');
-            signup.classList.remove('text-white');
-            document.querySelector(".logo").src = "img/logo-white.svg";
-        }
-        else {
-            nav.classList.add('bg-transparent');
-            nav.classList.remove('bg-black');
-            nav.classList.remove('opacity-75');
-            menu.classList.remove('text-white');
-            signup.classList.add('bg-black');
-            signup.classList.add('text-white');
-            signup.classList.remove('bg-white');
-            signup.classList.remove('text-black');
-            document.querySelector(".logo").src = "img/logo.svg";
-        }
-    };
+    // const nav = document.querySelector('.sticky');
+    // const menu = document.querySelector('.menu');
+    // const signup = document.querySelector('.signup');
+    // window.onscroll = () => {
+    //     if (window.pageYOffset > 0) {
+    //         nav.classList.add('bg-black');
+    //         nav.classList.add('opacity-75');
+    //         nav.classList.remove('bg-transparent');
+    //         menu.classList.add('text-white');
+    //         signup.classList.add('bg-white');
+    //         signup.classList.add('text-black');
+    //         signup.classList.remove('bg-black');
+    //         signup.classList.remove('text-white');
+    //         document.querySelector(".logo").src = "img/logo-white.svg";
+    //     }
+    //     else {
+    //         nav.classList.add('bg-transparent');
+    //         nav.classList.remove('bg-black');
+    //         nav.classList.remove('opacity-75');
+    //         menu.classList.remove('text-white');
+    //         signup.classList.add('bg-black');
+    //         signup.classList.add('text-white');
+    //         signup.classList.remove('bg-white');
+    //         signup.classList.remove('text-black');
+    //         document.querySelector(".logo").src = "img/logo.svg";
+    //     }
+    // };
 
 
     return (
         <div>
             {/* <h1 className="text-3xl font-bold underline">Landing</h1> */}
-            <nav class="sticky top-0 z-50">
+            <nav class="top-0 z-50">
                 {/* <!-- flex container --> */}
                 <main class="relative container mx-auto mb-8 p-6">
                     <div class="flex justify-between items-center">
                         {/* <!-- logo --> */}
                         <div class="pt-2">
-                            {/* <img class="logo" src="img/logo.svg" alt=""> */}
-                            <img class="logo" src={Logo} alt="" />
+                            <img src={logo} alt="logo" />
                         </div>
                         {/* <!-- menu items  --> */}
                         <div class="menu hidden font-semibold md:flex space-x-6">
-                            <a href="#hero" class=" hover:text-brightRed">Home</a>
-                            <a href="#features" class=" hover:text-brightRed">Features</a>
-                            <a href="#team" class=" hover:text-brightRed">Our Team</a>
-                            <a href="#hero" class=" hover:text-brightRed">Courses</a>
-                            <a href="#footer" class=" hover:text-brightRed">Contact</a>
+                            <a href="#hero" class=" hover:text-brightRed text-base">Home</a>
+                            <a href="#features" class=" hover:text-brightRed text-base">Features</a>
+                            <a href="#team" class=" hover:text-brightRed text-base">Our Team</a>
+                            <a href="#hero" class=" hover:text-brightRed text-base">Courses</a>
+                            <a href="#footer" class=" hover:text-brightRed text-base">Contact</a>
                         </div>
                         {/* <!-- buttons  --> */}
                         {/* onClick={() => { setIsOpen(true); setComp(true) }} */}
@@ -234,7 +235,7 @@ export default function Landing() {
                         <div class="mx-auto my-6 text-center text-white md:hidden">
                             Copyright &copy;CStube All rights reserved!
                         </div>
-                        <div>  <img src="img/logo-white.svg" alt="" class="h-8" /> </div>
+                        <div>  <img src={logo} alt="logo" className='ml-10 mt-0 mb-2' /> </div>
                         <div class="flex justify-center space-x-4">
                             <img src={Twtw} alt="" />
                             <img src={Insw} alt="" />
@@ -261,7 +262,7 @@ export default function Landing() {
                     <div class="flex flex-col justify-between">
                         <form>
                             <div class="flex mx-auto space-x-3">
-                                <label class="text-white text-xl font-bold block" for="">Have Queries? Mail us: </label>
+                                <p class="text-white text-xl font-bold block" for="">Have Queries? Mail us: </p>
                                 <input type="text" class="flex-1 block px-4 rounded-lg focus:outline-zinc-800" placeholder="" />
                                 <button class="px-6 py-2 bg-brightRed hover:bg-brightRedLight focus:outline-none text-white rounded-full">Send</button>
                             </div>

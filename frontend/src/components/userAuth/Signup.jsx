@@ -34,7 +34,7 @@ const Signup = () => {
                 <div class="bg-gray-200 flex rounded-2xl shadow-lg p-2 px-2 justify-center">
                     {/* <!-- form --> */}
                     <div class="md:w-1/2 px-1 md:pl-px p-2 items-center">
-                        <h2 class="font-bold text-4xl text-[#ff9863] text-center">Sign Up</h2>
+                        <h2 class="font-bold text-4xl text-brightRed text-center">Sign Up</h2>
                         <p class="text-sm mt-4 text-[#002D74] text-center">If you are not a member, Please Sign Up</p>
 
 
@@ -52,7 +52,7 @@ const Signup = () => {
                             <div class="relative">
                                 <input required value={cpassword} onChange={(e) => setCpassword(e.target.value)} class="p-2 rounded-xl border w-full" type="password" name="cpassword" placeholder="Confirm Password" />
                             </div>
-                            <button disabled={isLoading} class="bg-[#ff9863] rounded-xl text-white py-2 hover:scale-105 duration-300">Sign Up</button>
+                            <button disabled={isLoading} class="bg-brightRed rounded-xl text-white py-2 hover:scale-105 duration-300">Sign Up</button>
                             {error && <div className='error'>{error}</div>}
                         </form>
 
@@ -74,13 +74,13 @@ const Signup = () => {
                             Login with Google
                         </button>
 
-                        <div class="mt-2 text-sm border-b border-[#ff9863] py-4 text-[#002D74] text-center">
+                        <div class="mt-2 text-sm border-b border-brightRed py-4 text-[#002D74] text-center">
                             <p>Forgot your password?</p>
                         </div>
 
                         <div class="mt-2 text-sm flex justify-between items-center text-[#002D74]">
                             <p>Already have an account?</p>
-                            <Link to="/login"><button class="py-2 px-5 bg-[#ff9863] border rounded-xl hover:scale-110 duration-300 text-white">Login</button></Link>
+                            <Link to="/login"><button class="py-2 px-5 bg-brightRed border rounded-xl hover:scale-110 duration-300 text-white">Login</button></Link>
                         </div>
                     </div>
 

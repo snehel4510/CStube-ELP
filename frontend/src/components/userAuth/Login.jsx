@@ -26,7 +26,7 @@ const Login = () => {
                 <div class="bg-gray-200 flex rounded-2xl shadow-lg p-2 px-2 justify-center">
                     {/* <!-- form --> */}
                     <div class="md:w-1/2 px-1 md:pl-px p-2 items-center">
-                        <h2 class="font-bold text-4xl text-[#ff9863] text-center">Login</h2>
+                        <h2 class="font-bold text-4xl text-brightRed text-center">Login</h2>
                         <p class="text-sm mt-4 text-[#002D74] text-center">If you are already a member, Please log in</p>
 
                         <form action="" class="flex flex-col gap-4" onSubmit={handleSubmit}>
@@ -38,7 +38,7 @@ const Login = () => {
                                     <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
                                 </svg>
                             </div>
-                            <button disabled={isLoading} class="bg-[#ff9863] rounded-xl text-white py-2 hover:scale-105 duration-300">Login</button>
+                            <button disabled={isLoading} class="bg-brightRed rounded-xl text-white py-2 hover:scale-105 duration-300">Login</button>
                         </form>
 
                         <div class="mt-6 grid grid-cols-3 items-center text-gray-400">
@@ -57,13 +57,13 @@ const Login = () => {
                             Login with Google
                         </button>
 
-                        <div class="mt-2 text-sm border-b border-[#ff9863] py-4 text-[#002D74] text-center">
+                        <div class="mt-2 text-sm border-b border-brightRed py-4 text-[#002D74] text-center">
                             <p>Forgot your password?</p>
                         </div>
 
                         <div class="mt-2 text-sm flex justify-between items-center text-[#002D74]">
                             <p>Don't have an account?</p>
-                            <Link to="/signup"><button class="py-2 px-5 bg-[#ff9863] border rounded-xl hover:scale-110 duration-300 text-white">Register</button></Link>
+                            <Link to="/signup"><button class="py-2 px-5 bg-brightRed border rounded-xl hover:scale-110 duration-300 text-white">Register</button></Link>
                             {/* <Authmodal Comp={Comp} Open={isOpen} onClose={() => setIsOpen(false)} /> */}
                         </div>
                     </div>
@@ -71,7 +71,7 @@ const Login = () => {
                     {error && <div className='error'>{error}</div>}
 
                     {/* <!-- image --> */}
-                    <div class="md:block hidden w-1/2 pl-px items-`center`">
+                    <div class="md:block hidden w-1/2 pl-px items-center">
                         <img class="rounded-2xl" src={logo} />
                     </div>
                 </div>
