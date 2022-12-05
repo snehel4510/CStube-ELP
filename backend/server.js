@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 require('dotenv').config()
 
 const userRoutes = require('./routes/user_routes');
+const dashRoutes = require('./routes/dash_routes');
 
 const app = express();
 
@@ -15,7 +16,7 @@ app.use((req,res,next) => {
 })
 
 // registering the routes
-// app.use('/api/workouts',workoutRoutes)
+app.use('/cstube/dash',dashRoutes)
 app.use('/cstube/user',userRoutes)
 
 const port = process.env.PORT;
