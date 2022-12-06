@@ -1,6 +1,5 @@
 node_modules
 frontend/src/Home/index.html
-.env
 .gitignore
 ytplay.js
 frontend/build
