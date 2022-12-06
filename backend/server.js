@@ -19,6 +19,7 @@ app.use((req,res,next) => {
 app.use('/cstube/dash',dashRoutes)
 app.use('/cstube/user',userRoutes)
 
+// mongodb://localhost:27017/CSTUBE
 const port = process.env.PORT;
 const uri = process.env.MONGO_URI;
 mongoose.connect(uri)

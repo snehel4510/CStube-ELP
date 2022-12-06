@@ -14,7 +14,7 @@ import { DiBootstrap } from "react-icons/di";
 export const logo = 'https://i.ibb.co/s9Qys2j/logo.png';
 
 export const categories = [
-    { name: 'Home', icon: < HomeIcon / > , },
+    // { name: 'Home', icon: < HomeIcon / > , },
     {
         name: 'Java',
         icon: < DiJava size = { '30px' }
