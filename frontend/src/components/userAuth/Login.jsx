@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
-import logo from './coding.svg'
+import logo from './pass.svg'
 import { useState } from 'react'
 import { useLogin } from '../../hooks/useLogin'
 import { Link } from 'react-router-dom'
@@ -74,6 +74,9 @@ const Login = () => {
                     <div class="md:block hidden w-1/2 pl-px items-center">
                         <img class="rounded-2xl" src={logo} />
                     </div>
+                    <Link to="/">
+                        <button class="bg-brightRedLight rounded-xl text-white py-2 hover:scale-105 duration-300">Back to Home</button>
+                    </Link>
                 </div>
             </section>
         </div>

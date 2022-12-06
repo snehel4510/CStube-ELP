@@ -15,6 +15,7 @@ import Twtw from './img/twitterw.svg'
 import Insw from './img/instaw.svg'
 import Pin from './img/pinterest.svg'
 import Fb from './img/icon-facebook.svg'
+import avt from './img/avatar.webp'
 
 import './Landing.css'
 import logo from './img/icons8.svg'
@@ -177,7 +178,7 @@ export default function Landing() {
                     <div class="flex flex-col mt-24 md:flex-row md:space-x-6">
                         {/* <!-- ankur --> */}
                         <div class="flex flex-col items-center space-y-6 p-6 rounded-lg bg-veryLightGray md:w-1/3">
-                            <img src="img/avatar-anisha.png" alt="" class="w-20 h-20 -mt-14" />
+                            <img src={avt} alt="" class="w-20 h-20 -mt-14" />
                             <h5 class="text-lg font-bold">Ankur</h5>
                             <div class="flex flex-row items-center space-x-5">
                                 <img src={Lin} alt="" />
@@ -187,7 +188,7 @@ export default function Landing() {
                         </div>
                         {/* <!-- snehel --> */}
                         <div class="flex-col items-center space-y-6 p-6 rounded-lg bg-veryLightGray md:flex md:w-1/3">
-                            <img src="img/avatar-richard.png" alt="" class="w-20 h-20 -mt-14" />
+                            <img src={avt} alt="" class="w-20 h-20 -mt-14" />
                             <h5 class="text-lg font-bold">Snehel</h5>
                             <div class="flex flex-row items-center space-x-5">
                                 <img src={Lin} alt="" />
@@ -197,7 +198,7 @@ export default function Landing() {
                         </div>
                         {/* <!-- vivek --> */}
                         <div class="flex-col items-center space-y-6 p-6 rounded-lg bg-veryLightGray md:flex md:w-1/3">
-                            <img src="img/avatar-shanai.png" alt="" class="w-20 h-20 -mt-14" />
+                            <img src={avt} alt="" class="w-20 h-20 -mt-14" />
                             <h5 class="text-lg font-bold">Vivek</h5>
                             <div class="flex flex-row items-center space-x-5">
                                 <img src={Lin} alt="" />

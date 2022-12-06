@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useSignup } from '../../hooks/useSignup'
 
-import logo from "./coding.svg"
+import logo from "./pass.svg"
 // import { useState } from 'react'
 // import Authmodal from '../../Home/Authmodal'
 
@@ -88,6 +88,9 @@ const Signup = () => {
                     <div class="md:block hidden w-1/2 pl-px items-center">
                         <img class="rounded-2xl" src={logo} />
                     </div>
+                    <Link to="/">
+                        <button class="bg-brightRedLight rounded-xl text-white py-2 hover:scale-105 duration-300">Back to Home</button>
+                    </Link>
                 </div>
             </section>
         </div>
