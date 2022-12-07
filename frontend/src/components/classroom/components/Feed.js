@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Box, Stack, Typography } from "@mui/material";
 
 import { fetchFromAPI } from "../utils/fetchFromAPI";
-import { Videos, Sidebar } from "./";
+import { Videos, Sidebar } from ".";
 
 const Feed = () => {
   const [selectedCategory, setSelectedCategory] = useState("Computer Science");

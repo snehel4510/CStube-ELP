@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { AiOutlineUser } from "react-icons/ai";
 // import { logo } from "../utils/constants";
 import logo from '../../../Home/img/icons8.svg'
-import { SearchBar } from "./";
+import { SearchBar } from ".";
 
 const Navbar = () => (
     <Stack direction="row"

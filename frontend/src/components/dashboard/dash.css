@@ -1,0 +1,224 @@
+:root {
+    --header-height: 3rem;
+    --nav-width: 68px;
+    --first-color: #0d0107;
+    --first-color-alt: #f5c382;
+    --white-color: #f5c382;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+main.dash {
+    position: relative;
+    margin: var(--header-height) 0 0 0;
+    padding: 0 1rem;
+    font-size: 1rem;
+    font-family: 'Nunito Sans', sans-serif;
+    transition: 0.5s;
+}
+
+.header.dash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: var(--header-height);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white-color);
+    padding: 0 1rem;
+    transition: 0.5s;
+}
+
+.header-toggle {
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: var(--first-color);
+}
+
+.sidebar.dash {
+    position: fixed;
+    top: 0;
+    left: -30%;
+    height: 100vh;
+    width: var(--nav-width);
+    background-color: var(--first-color);
+    padding-top: 1rem;
+    transition: 0.5s;
+}
+
+.nav.dash {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    height: 100%;
+}
+
+.nav-logo,
+.nav-link {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    column-gap: 2rem;
+    padding: 0.5rem 0 0.5rem 1.5rem;
+}
+
+.nav-logo {
+    margin-bottom: 2rem;
+}
+
+.nav-logo-icon {
+    font-size: 1.25rem;
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.nav-logo-name {
+    font-weight: 700;
+    color: var(--white-color);
+}
+
+.nav-link {
+    position: relative;
+    color: var(--first-color-alt);
+    transition: 0.5s;
+    margin-bottom: 1.5rem;
+}
+
+.nav-link:hover {
+    color: var(--white-color);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.active {
+    color: var(--white-color);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 38px;
+    width: 3px;
+    background-color: var(--white-color);
+    transition: 0.5s;
+}
+
+.show {
+    left: 0;
+}
+
+.space-toggle.dash {
+    padding-left: calc(var(--nav-width) + 1rem);
+}
+
+@media screen and (min-width: 768px) {
+    main.dash {
+        margin: calc(var(--header-height) + 1rem) 0 0 0;
+        padding: 0 1rem 0 calc(var(--nav-width) + 2rem);
+    }
+    .header.dash {
+        height: calc(var(--header-height) + 1rem);
+        padding-left: calc(var(--nav-width) + 2rem);
+    }
+    .sidebar.dash {
+        left: 0;
+        padding: 1rem 0 0 0;
+    }
+    .show {
+        width: calc(var(--header-height) + 156px);
+    }
+    .space-toggle {
+        padding-left: calc(var(--nav-width) + 188px);
+    }
+}
+
+body {
+    background: #eee;
+    padding: 0 16px;
+}
+
+.note.dash {
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #ccc;
+    padding: 10px;
+    width: 240px;
+    margin: 16px;
+    float: left;
+}
+
+.note h1 {
+    font-size: 1.1em;
+    margin-bottom: 6px;
+}
+
+.note p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.note.dash button {
+    position: relative;
+    float: right;
+    margin-right: 10px;
+    color: #f5ba13;
+    border: none;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    outline: none;
+}
+
+form.dash {
+    position: relative;
+    width: 480px;
+    margin: 30px auto 20px auto;
+    background: #fff;
+    padding: 15px;
+    border-radius: 7px;
+    box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+
+form.dash input,
+form.dash textarea {
+    width: 100%;
+    border: none;
+    padding: 4px;
+    outline: none;
+    font-size: 1.2em;
+    font-family: inherit;
+    resize: none;
+}
+
+form.dash button {
+    position: absolute;
+    right: 18px;
+    bottom: -18px;
+    background: #f5ba13;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    outline: none;
+}

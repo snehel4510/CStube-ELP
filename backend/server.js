@@ -30,8 +30,8 @@ app.get("*" , (req,res)=>{
 
 
 // mongodb://localhost:27017/CSTUBE
-const port = process.env.PORT;
-const uri = process.env.MONGO_URI;
+const port = 4000;
+const uri = 'mongodb+srv://snehel4510:sahil123@platform.ujgo342.mongodb.net/?retryWrites=true&w=majority';
 mongoose.connect(uri)
     .then(() => {
         app.listen(port, () => {
